@@ -1,3 +1,8 @@
 img {
   border: 2px dashed red
 }
+
+input {
+color: green;
+padding-left: 90px; 
+}

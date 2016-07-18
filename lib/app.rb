@@ -1,14 +1,12 @@
 require 'sinatra'
 
-set :session_secret, 'super secret'
 
-get '/random-cat' do
-  @sample_name = ['Amigo', 'Oskar', 'Viking'].sample
-  erb(:index)
-end
 
 get '/named-cat' do
-  p params
-  @sample_name = params[:name]
-  erb(:index)
+  if params[:name].nil?
+    @sample_name = ['Amigo', 'Viking', 'Oskar'].sample
+  else
+    @sample_name = params[:name]
+  end
+    erb(:index)
 end

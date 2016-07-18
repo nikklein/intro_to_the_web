@@ -1,7 +1,12 @@
-  <% if @sample_name %>
-  <h1>My name is <%= @sample_name%></h1>
-  <% end %>
 <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+<% if @sample_name %>
+<h1>My name is <%= @sample_name%></h1>
+<% end %>
+<form action="/named-cat">
+<input type="text" name="name"/>
+<input type="submit" value = "Submit"/>
+</form>
+
 <div>
 <img src='http://bit.ly/1eze8aE'>
-  </div>
+</div>
