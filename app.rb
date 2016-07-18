@@ -15,7 +15,5 @@ get '/nextpage' do
 end
 
 get '/cat' do
-  "<div style='width:454px; border: 10px dotted pink;'>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
+  erb(:index)
 end
